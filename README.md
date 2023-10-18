@@ -1,2 +1,2 @@
-# friendly-rotary-phone
+# Homework-Reminder
 Remind you to do homework before DDL.
