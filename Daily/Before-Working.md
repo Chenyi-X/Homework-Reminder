@@ -10,6 +10,10 @@
 
 博客更新：微信公众号**[*公式痛哭*](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Mzg2NzgzNzE1Nw==&scene=117#wechat_redirect)** 
 
+# 目录
+
+[TOC]
+
 ## 如何开启一个项目
 
 ### **我的思考如下：**
@@ -18,6 +22,8 @@
    - （暂无搜寻到较好的参考，后续更新补充
    - 可能有点类似博客管理系统
    - https://blog.csdn.net/weixin_45019350/article/details/108869025
+   - https://github.com/elunez/eladmin
+     - 文档https://eladmin.vip/pages/010101/
 2. 开发项目的流程是什么？
    - 寻找范例
      - https://www.cnblogs.com/hanyinglong/archive/2013/01/21/2870494.html
@@ -51,7 +57,8 @@
 8. 使用mysql数据库对数据进行持久化操作
    - 使用mysql模糊查询
    - jdbc，封装工具类
-9. mvc三层架构
+     - 
+9. MVC三层架构
 10. 使用缓存, 加快用户列表和作业列表的展示
 11. 简单JavaWeb
     - ajax
@@ -96,7 +103,7 @@
 7. Java高级
 8. 多线程，线程池
 9. 第三方包 & maven
-10. 缓存
+10. 缓存  redies
 11. 后端框架
     - Spring
     - Spring MVC
@@ -108,6 +115,8 @@
 ### 开发计划 （后续慢慢完善
 
 `总的来说计划是 边学边开发，按照feat列表由简到易进行。`
+
+按功能分模块的开发方式
 
 #### 项目架构
 
