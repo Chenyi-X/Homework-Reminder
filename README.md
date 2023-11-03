@@ -31,7 +31,7 @@ create table userInformation
     `user_age`  int unsigned check ( `user_age` < 150 ),
     `roleid` int not null,
     PRIMARY KEY(`user_id`)
-)default charset=utf8;;
+)default charset=utf8;
 ```
 
 #### 角色表
@@ -61,7 +61,7 @@ id主键
 优先级
 
 ```mysql
-create table homework
+create table homeworkInformation
 (
 	`hwid` int auto_increment,
 	`title` varchar(255) not null unique,
@@ -89,9 +89,26 @@ create table priority
 )default charset=utf8;
 ```
 
-### 初始化表格
+### 初始化数据
 
-### 测试数据
+#### 初始化角色表
+
+```mysql
+insert into userRole values(0,'超级管理员','作业创建|作业编辑|搜索作业|删除作业|个人信息管理|用户管理');
+insert into userRole values(1,'用户','作业创建|作业编辑|搜索作业|删除作业|个人信息管理');
+```
+
+#### 初始化优先级表
+
+```mysql
+insert into priority values(0,'低');
+insert into priority values(1,'中',);
+insert into priority values(2,'高',);
+```
+
+### 数据库配置
+
+
 
 ## 主要功能 
 
