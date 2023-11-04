@@ -1,11 +1,11 @@
-package org.homework.ui;
+package org.homework.view;
 
+import org.homework.common.CommonClass;
 import org.homework.controller.WelcomeController;
 
 import java.util.Scanner;
 
 public class WelcomeUI {
-    private static Scanner in = new Scanner(System.in);
 
     public static void show() {
         System.out.println("--------欢迎使用学生管理系统--------");
@@ -15,7 +15,8 @@ public class WelcomeUI {
         System.out.println("---------------------------------");
         System.out.print("请输入你的选择：");
 
-        WelcomeController.choose = in.nextLine();
+        CommonClass.choose = CommonClass.in.nextLine();
 
+        WelcomeController.isContinue(true);
     }
 }

@@ -2,7 +2,7 @@ package org.homework;
 
 
 import org.homework.controller.WelcomeController;
-import org.homework.ui.WelcomeUI;
+import org.homework.view.WelcomeUI;
 
 public class Main {
     public static void main(String[] args) {

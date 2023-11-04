@@ -1,13 +1,13 @@
 package org.homework.controller;
 
-import org.homework.ui.LoginUI;
-import org.homework.ui.RegisterUI;
+import org.homework.common.CommonClass;
+import org.homework.view.LoginUI;
+import org.homework.view.RegisterUI;
 
 public class WelcomeController {
-    public static String choose;
 
     public static boolean isContinue(boolean OK) {
-        switch (choose) {
+        switch (CommonClass.choose) {
             case "1":
                 LoginUI.show();
                 break;
