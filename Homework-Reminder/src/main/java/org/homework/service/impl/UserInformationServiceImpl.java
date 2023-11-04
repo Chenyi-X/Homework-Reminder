@@ -25,7 +25,7 @@ public class UserInformationServiceImpl implements UserInformationService {
     @Override
     public Integer login(String user, String password) throws SQLException {
         Integer result = 0;
-        String sql = "select count(*) from userInformation where `user`=? and `password`=?";
+        String sql = "select count(*) from user_information where `user_name`=? and `password`=?";
         Object[] params = {user, password};
         ScalarHandler<Long> handler = new ScalarHandler<>();
         Long count = runner.query(sql, handler, params);
@@ -39,7 +39,7 @@ public class UserInformationServiceImpl implements UserInformationService {
 
     @Override
     public void register(UserInformation userInformation) throws SQLException {
-        String sql = "insert into userInformation values(?,?,?,?,?)";
+        String sql = "insert into user_information values(?,?,?,?,?)";
         Object[] params = {
                 userInformation.getUserId(),
                 userInformation.getPassword(),
@@ -52,7 +52,11 @@ public class UserInformationServiceImpl implements UserInformationService {
 
     @Override
     public String[] getMenu(String account) throws SQLException {
-        return userInformationDao.getMenu(account);
+        String sql = "select `menu_list` from user_role where `role_id` = (select `role_id` from user_information where `user_name`=?)";
+        Object[] params = {account};
+        ScalarHandler<String> handler = new ScalarHandler();
+        String query = runner.query(sql, handler, params);
+        return query.split("\\|");
     }
 
 }

@@ -18,5 +18,7 @@ public class LoginUI {
         pwd = CommonClass.in.next();
 
         LoginController.login(account,pwd);
+
+
     }
 }
