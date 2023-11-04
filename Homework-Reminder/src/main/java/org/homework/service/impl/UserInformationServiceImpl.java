@@ -20,7 +20,7 @@ public class UserInformationServiceImpl implements UserInformationService {
     private QueryRunner runner;
 
     public UserInformationServiceImpl() {
-        runner = JDBCUtils.getQueryRunner();
+        runner = DButils.getQueryRunner();
     }
     @Override
     public Integer login(String user, String password) throws SQLException {
@@ -29,13 +29,10 @@ public class UserInformationServiceImpl implements UserInformationService {
         Object[] params = {user, password};
         ScalarHandler<Long> handler = new ScalarHandler<>();
         Long count = runner.query(sql, handler, params);
-        Integer state = this.getState(user);
         if (count == 1) {
             result = 1; // 成功
-        } else if (state == 0) { //1启用 0禁用
-            result = 0; // 账户被禁用
         } else {
-            result = -1;// 未找到
+            result = 0;// 未找到
         }
         return result;
     }
