@@ -1,9 +1,13 @@
-package org.homework.entity;
+package org.homework.common.entity;
 
-/*员工实体*/
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class HomeworkInformation {
     private int hwId;
     private String title;
